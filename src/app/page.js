@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from '@/components/ui/accordion'
+import { Pregunta } from './components/Pregunta'
 
 export default function Home () {
   return (
@@ -11,7 +6,7 @@ export default function Home () {
       <header>
         <h1 className='text-center text-slate-100 pt-3 pb-3 w-full text-xl fixed z-10 bg-background'>SluggerBet</h1>
       </header>
-      <section id='hero' class='mb-40'>
+      <section id='hero' className='mb-40 lg:h-screen'>
         <div class='px-6 py-12 md:px-12 text-center lg:text-left'>
           <div class='container mx-auto xl:px-32'>
             <div class='grid lg:grid-cols-2 gap-12  items-center'>
@@ -37,7 +32,7 @@ export default function Home () {
           </div>
         </div>
       </section>
-      <section id='features' class='mb-32  text-center m-12'>
+      <section id='features' className='mb-32 text-center m-12 lg:h-screen'>
         <h2 class='text-3xl font-bold mb-12'>Porque es tan<u class='text-primary'> bueno?</u></h2>
         <div class='grid md:grid-cols-3 lg:gap-x-12'>
           <div class='mb-12 md:mb-0'>
@@ -86,8 +81,8 @@ export default function Home () {
           </div>
         </div>
       </section>
-      <section id='testimonios' class='mb-32 text-gray-800 text-center m-20'>
-        <h2 class='text-3xl font-bold mb-12 text-slate-200'>Testimonials</h2>
+      <section id='testimonios' className='mb-32 text-gray-800 text-center m-20 lg:h-screen'>
+        <h2 class='text-3xl font-bold mb-12 text-slate-200'>Testimonios</h2>
         <div class='grid md:grid-cols-3 gap-x-6 xl:gap-x-12'>
           <div class='mb-6 lg:mb-0'>
             <div class=' bg-slate-100 block rounded-lg shadow-lg'>
@@ -303,17 +298,39 @@ export default function Home () {
           </div>
         </div>
       </section>
-      <section class=''>
-        <h1>HOla</h1>
-        <Accordion type='single' collapsible>
-          <AccordionItem value='item-1'>
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+      <section id='preguntas' className='lg:h-screen'>
+        <Pregunta />
       </section>
+      <section id='LCA' className='m-20 text-center lg:h-screen'>
+        <div class='px-6 py-12 md:px-12'>
+          <h2 class='text-5xl my-12 font-bold tracking-tight'>
+            Aprovecha la prueba<br />
+            <span class='text-primary'>Gratis</span>
+          </h2>
+          <a
+            class=' text-gray-950 px-7 py-3 bg-primary font-bold text-sm  rounded shadow-md  mb-2 md:mr-2'
+            role='button'
+          >Acceder
+          </a>
+        </div>
+      </section>
+      <footer className=''>
+        <ul className='flex justify-center gap-3 mb-7 text-slate-300 '>
+          <li>
+            <i className='fa-solid fa-phone' />
+          </li>
+          <li>
+            <i className='fa-brands fa-instagram' />
+          </li>
+          <li>
+            <i className='fa-brands fa-facebook-f' />
+          </li>
+          <li>
+            <i className='fa-brands fa-tiktok' />
+          </li>
+        </ul>
+        <p className=' text-sm mb-7 text-center opacity-50'>© 2023 Todos los derechos reservados.<br /> Diseñado por David Castro.</p>
+      </footer>
     </main>
   )
 }

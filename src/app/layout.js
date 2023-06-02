@@ -11,7 +11,10 @@ export const metadata = {
 export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
-      <body className={ovo.className}>{children}</body>
+      <body className={ovo.className}>
+        {children}
+        <script defer src='https://kit.fontawesome.com/a654d59b05.js' crossorigin='anonymous' />
+      </body>
     </html>
   )
 }
