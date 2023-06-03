@@ -1,5 +1,8 @@
+import Provider from './components/Provider'
 import './globals.css'
 import { Ovo } from 'next/font/google'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 const ovo = Ovo({ subsets: ['latin'], weight: '400' })
 
@@ -12,7 +15,11 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
       <body className={ovo.className}>
-        {children}
+        <Provider className='bg-gray-950 text-slate-100'>
+          <Header />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   )
