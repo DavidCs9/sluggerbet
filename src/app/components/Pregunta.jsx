@@ -49,7 +49,7 @@ export function Pregunta () {
           return (
             <motion.div
               key={id}
-              className='flex flex-col gap-4 bg-gray-900 p-4 rounded-lg mb-4'
+              className='flex flex-col gap-4 bg-violet-500 bg-opacity-50 p-4 rounded-lg mb-4'
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

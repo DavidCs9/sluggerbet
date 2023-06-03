@@ -10,7 +10,7 @@ export function Accordion ({ pregunta, respuestas }) {
   return (
     <>
       <div onClick={() => setShow(!show)} className='flex justify-between items-center cursor-pointer'>
-        <h2 className='text-lg text-primary'>{pregunta}</h2>
+        <h2 className='text-lg text-white font-semibold'>{pregunta}</h2>
         <BiChevronDown
           className={`text-5xl transition-all duration-500 ${show ? 'rotate-180' : ''}`}
         />

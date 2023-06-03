@@ -114,7 +114,7 @@ export default function Home () {
               className=' bg-slate-100 block rounded-lg shadow-lg'
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
               <div className='relative overflow-hidden bg-no-repeat bg-cover'>
@@ -191,7 +191,7 @@ export default function Home () {
               class='bg-slate-100 block rounded-lg shadow-lg'
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
               <div class='relative overflow-hidden bg-no-repeat bg-cover'>
@@ -268,7 +268,7 @@ export default function Home () {
               class='bg-slate-100 block rounded-lg shadow-lg'
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
               <div class='relative overflow-hidden bg-no-repeat bg-cover'>
@@ -344,18 +344,17 @@ export default function Home () {
       <section id='preguntas' className='lg:h-screen'>
         <Pregunta />
       </section>
-      <section id='LCA' className='m-20 text-center lg:h-screen'>
+      <section id='LCA' className='mx-8 text-center lg:h-screen mb-16 mt-16'>
         <div className='px-6 py-12 md:px-12'>
-          <h2 className='text-5xl my-12 font-bold tracking-tight'>
-            Aprovecha la prueba<br />
-            <span className='text-primary'>Gratis</span>
+          <h2 className=' text-4xl lg:text-5xl my-12 font-bold tracking-tight'>
+            Aprovecha la <br />prueba
+            <span className='text-primary'> gratis</span>
           </h2>
-          <motion.a
-            className=' text-gray-950 px-7 py-3 bg-primary font-bold text-sm  rounded shadow-md  mb-2 md:mr-2'
-            role='button'
-            whileHover={{ scale: 1.1 }}
-          >Acceder
-          </motion.a>
+          <Link
+            href='/application'
+            className=' bg-primary p-3 rounded-xl text-gray-950 px-4 text-xl font-bold'
+          >Pruebalo
+          </Link>
         </div>
       </section>
       <footer className=''>
