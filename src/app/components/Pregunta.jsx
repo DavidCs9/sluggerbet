@@ -1,4 +1,5 @@
 import { Accordion } from './Accordion'
+import { motion } from 'framer-motion'
 
 const dataPreguntas = [
   {
@@ -46,9 +47,16 @@ export function Pregunta () {
         {dataPreguntas.map((item, id) => {
           const { pregunta, respuestas } = item
           return (
-            <div key={id} className='flex flex-col gap-4 bg-gray-900 p-4 rounded-lg mb-4'>
+            <motion.div
+              key={id}
+              className='flex flex-col gap-4 bg-gray-900 p-4 rounded-lg mb-4'
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
               <Accordion pregunta={pregunta} respuestas={respuestas} />
-            </div>
+            </motion.div>
           )
         }
         )}

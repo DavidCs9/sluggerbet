@@ -1,3 +1,5 @@
+'use client'
+import { motion } from 'framer-motion'
 import { Pregunta } from './components/Pregunta'
 
 export default function Home () {
@@ -6,7 +8,13 @@ export default function Home () {
       <header>
         <h1 className='text-center text-slate-100 pt-3 pb-3 w-full text-xl fixed z-10 bg-background'>SluggerBet</h1>
       </header>
-      <section id='hero' className='mb-40 lg:h-screen'>
+      <motion.section
+        id='hero'
+        className='mb-40 h-screen'
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div class='px-6 py-12 md:px-12 text-center lg:text-left'>
           <div class='container mx-auto xl:px-32'>
             <div class='grid lg:grid-cols-2 gap-12  items-center'>
@@ -14,12 +22,14 @@ export default function Home () {
                 <h1 class='text-5xl md:text-6xl xl:text-7xl text-slate-200 font-bold tracking-tight mb-12'>
                   Apuestas inteligentes<br /><span class=' text-primary'>Datos poderosos</span>
                 </h1>
-                <a
-                  class='inline-block px-7 py-3  bg-primary text-slate-900 font-bold
+                <motion.a
+                  className='inline-block px-7 py-3  bg-primary text-slate-900 font-bold
                 text-md  uppercase rounded shadow-md'
                   role='button'
+                  whileHover={{ scale: 1.1 }}
+                  onClick={{ scale: 1.1 }}
                 >Pruebalo
-                </a>
+                </motion.a>
               </div>
               <div class='mb-12 lg:mb-0 lg:mt-12'>
                 <img
@@ -31,11 +41,16 @@ export default function Home () {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
       <section id='features' className='mb-32 text-center m-12 lg:h-screen'>
         <h2 class='text-3xl font-bold mb-12'>Porque es tan<u class='text-primary'> bueno?</u></h2>
         <div class='grid md:grid-cols-3 lg:gap-x-12'>
-          <div class='mb-12 md:mb-0'>
+          <motion.div
+            className='mb-12 md:mb-0'
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: false }}
+          >
             <div class='p-3 bg-primary rounded-lg shadow-lg inline-block mb-6'>
               <svg className=' text-white' xmlns='http://www.w3.org/2000/svg' height='1.3em' viewBox='0 0 512 512'>
                 <path
@@ -47,9 +62,14 @@ export default function Home () {
             <p class='text-gray-200'>
               Toma decisiones informadas para tus apuestas y mantente al tanto de los acontecimientos más recientes del béisbol con nuestra función de datos actualizados 24/7, siempre un paso adelante.
             </p>
-          </div>
+          </motion.div>
 
-          <div class='mb-12 md:mb-0'>
+          <motion.div
+            className='mb-12 md:mb-0'
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: false }}
+          >
             <div class='p-3 bg-primary rounded-lg shadow-lg inline-block mb-6'>
               <svg xmlns='http://www.w3.org/2000/svg' height='1.3em' viewBox='0 0 640 512'>
                 <path
@@ -62,9 +82,14 @@ export default function Home () {
               Consulta a nuestra IA sobre el significado de las estadísticas que desees.
               Obtén respuestas claras y comprensibles para comprender mejor el juego.
             </p>
-          </div>
+          </motion.div>
 
-          <div class='mb-12 md:mb-0'>
+          <motion.div
+            className='mb-12 md:mb-0'
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: false }}
+          >
             <div class='p-3 bg-primary rounded-lg shadow-lg inline-block mb-6'>
               <svg xmlns='http://www.w3.org/2000/svg' height='1.3em' viewBox='0 0 576 512'>
                 <path
@@ -78,25 +103,33 @@ export default function Home () {
               noticias relevantes. Mantente al día con el rendimiento de los jugadores clave y obtén
               información exclusiva para tomar decisiones más informadas en tus apuestas.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section id='testimonios' className='mb-32 text-gray-800 text-center m-20 lg:h-screen'>
         <h2 class='text-3xl font-bold mb-12 text-slate-200'>Testimonios</h2>
         <div class='grid md:grid-cols-3 gap-x-6 xl:gap-x-12'>
-          <div class='mb-6 lg:mb-0'>
-            <div class=' bg-slate-100 block rounded-lg shadow-lg'>
-              <div class='relative overflow-hidden bg-no-repeat bg-cover'>
-                <img src='/othani.webp' class='w-full rounded-t-lg' />
+          <div
+            className='mb-6 lg:mb-0'
+          >
+            <motion.div
+              className=' bg-slate-100 block rounded-lg shadow-lg'
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              viewport={{ once: true }}
+            >
+              <div className='relative overflow-hidden bg-no-repeat bg-cover'>
+                <img src='/othani.webp' className='w-full rounded-t-lg' />
               </div>
-              <div class='p-6'>
-                <h5 class='text-lg font-bold mb-2'>Shohei Ohtani</h5>
-                <h6 class='font-medium text mb-4'>Two way player</h6>
-                <ul class='flex justify-center mb-6'>
+              <div className='p-6'>
+                <h5 className='text-lg font-bold mb-2'>Shohei Ohtani</h5>
+                <h6 className='font-medium text mb-4'>Two way player</h6>
+                <ul className='flex justify-center mb-6'>
                   <li>
                     <svg
                       aria-hidden='true' focusable='false' data-prefix='fas' data-icon='star'
-                      class='w-4 text-yellow-500' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'
+                      className='w-4 text-yellow-500' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512'
                     >
                       <path
                         fill='currentColor'
@@ -152,11 +185,17 @@ export default function Home () {
                 <p>"Esta app es una gran ventaja. Datos precisos, análisis avanzados y aprendizaje con IA. Mejora mi rendimiento y toma decisiones estratégicas. ¡Recomendada para fanáticos del béisbol!"
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div class='mb-6 lg:mb-0'>
-            <div class='bg-slate-100 block rounded-lg shadow-lg'>
+            <motion.div
+              class='bg-slate-100 block rounded-lg shadow-lg'
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              viewport={{ once: true }}
+            >
               <div class='relative overflow-hidden bg-no-repeat bg-cover'>
                 <img src='https://mdbootstrap.com/img/new/avatars/8.jpg' class='w-full rounded-t-lg' />
               </div>
@@ -223,11 +262,17 @@ export default function Home () {
                 <p>"Me encanta cómo puedo personalizar mi seguimiento y recibir actualizaciones en tiempo real sobre los jugadores clave. Ha mejorado mi juego y me ha dado una ventaja en las apuestas. ¡Recomiendo esta app a todos los amantes del béisbol!"
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div class=''>
-            <div class='bg-slate-100 block rounded-lg shadow-lg'>
+            <motion.div
+              class='bg-slate-100 block rounded-lg shadow-lg'
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 2 }}
+              viewport={{ once: true }}
+            >
               <div class='relative overflow-hidden bg-no-repeat bg-cover'>
                 <img src='https://mdbootstrap.com/img/new/avatars/15.jpg' class='w-full rounded-t-lg' />
               </div>
@@ -294,7 +339,7 @@ export default function Home () {
                 <p>"Gracias a esta app, he podido tomar decisiones más informadas en mis apuestas, aumentando mis posibilidades de éxito. Además, su comunidad de apostadores me ha permitido compartir estrategias y recibir consejos valiosos."
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -302,20 +347,21 @@ export default function Home () {
         <Pregunta />
       </section>
       <section id='LCA' className='m-20 text-center lg:h-screen'>
-        <div class='px-6 py-12 md:px-12'>
-          <h2 class='text-5xl my-12 font-bold tracking-tight'>
+        <div className='px-6 py-12 md:px-12'>
+          <h2 className='text-5xl my-12 font-bold tracking-tight'>
             Aprovecha la prueba<br />
-            <span class='text-primary'>Gratis</span>
+            <span className='text-primary'>Gratis</span>
           </h2>
-          <a
-            class=' text-gray-950 px-7 py-3 bg-primary font-bold text-sm  rounded shadow-md  mb-2 md:mr-2'
+          <motion.a
+            className=' text-gray-950 px-7 py-3 bg-primary font-bold text-sm  rounded shadow-md  mb-2 md:mr-2'
             role='button'
+            whileHover={{ scale: 1.1 }}
           >Acceder
-          </a>
+          </motion.a>
         </div>
       </section>
       <footer className=''>
-        <ul className='flex justify-center gap-3 mb-7 text-slate-300 '>
+        <ul className='flex justify-center gap-3 mb-7 text-slate-300 cursor-pointer'>
           <li>
             <i className='fa-solid fa-phone' />
           </li>
