@@ -2,6 +2,8 @@
 import { motion } from 'framer-motion'
 import { Pregunta } from './components/Pregunta'
 import Link from 'next/link'
+import { BsInstagram, BsLinkedin, BsTiktok } from 'react-icons/bs'
+import { FiTwitter } from 'react-icons/Fi'
 
 export default function Home () {
   return (
@@ -360,16 +362,16 @@ export default function Home () {
       <footer className=' pb-10'>
         <ul className='flex justify-center gap-3 mb-7 text-slate-300 cursor-pointer'>
           <li>
-            <i className='fa-solid fa-phone' />
+            <BsInstagram />
           </li>
           <li>
-            <i className='fa-brands fa-instagram' />
+            <FiTwitter />
           </li>
           <li>
-            <i className='fa-brands fa-facebook-f' />
+            <BsLinkedin />
           </li>
           <li>
-            <i className='fa-brands fa-tiktok' />
+            <BsTiktok />
           </li>
         </ul>
         <p className=' text-sm mb-7 text-center opacity-50'>© 2023 Todos los derechos reservados.<br /> Diseñado por David Castro.</p>
