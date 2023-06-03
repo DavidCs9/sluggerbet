@@ -357,7 +357,7 @@ export default function Home () {
           </Link>
         </div>
       </section>
-      <footer className=''>
+      <footer className=' pb-10'>
         <ul className='flex justify-center gap-3 mb-7 text-slate-300 cursor-pointer'>
           <li>
             <i className='fa-solid fa-phone' />
