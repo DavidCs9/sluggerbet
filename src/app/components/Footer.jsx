@@ -1,5 +1,4 @@
 import { BsInstagram, BsLinkedin, BsTiktok } from 'react-icons/bs'
-import { FiTwitter } from 'react-icons/Fi'
 
 export default function Footer () {
   return (
@@ -8,9 +7,6 @@ export default function Footer () {
         <ul className='flex justify-center gap-3 mb-7 text-slate-300 cursor-pointer'>
           <li>
             <BsInstagram />
-          </li>
-          <li>
-            <FiTwitter />
           </li>
           <li>
             <BsLinkedin />
