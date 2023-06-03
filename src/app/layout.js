@@ -13,7 +13,6 @@ export default function RootLayout ({ children }) {
     <html lang='en'>
       <body className={ovo.className}>
         {children}
-        <script defer src='https://kit.fontawesome.com/a654d59b05.js' crossorigin='anonymous' />
       </body>
     </html>
   )
