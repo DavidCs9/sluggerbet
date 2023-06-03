@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Pregunta } from './components/Pregunta'
+import Link from 'next/link'
 
 export default function Home () {
   return (
@@ -22,14 +23,11 @@ export default function Home () {
                 <h1 class='text-5xl md:text-6xl xl:text-7xl text-slate-200 font-bold tracking-tight mb-12'>
                   Apuestas inteligentes<br /><span class=' text-primary'>Datos poderosos</span>
                 </h1>
-                <motion.a
-                  className='inline-block px-7 py-3  bg-primary text-slate-900 font-bold
-                text-md  uppercase rounded shadow-md'
-                  role='button'
-                  whileHover={{ scale: 1.1 }}
-                  onClick={{ scale: 1.1 }}
+                <Link
+                  href='/application'
+                  className=' bg-primary p-3 rounded-xl text-gray-950 px-4 text-xl font-bold'
                 >Pruebalo
-                </motion.a>
+                </Link>
               </div>
               <div class='mb-12 lg:mb-0 lg:mt-12'>
                 <img
