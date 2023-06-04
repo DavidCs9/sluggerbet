@@ -21,9 +21,9 @@ export default function Landing () {
                   Apuestas inteligentes<br /><span class=' text-primary'>Datos poderosos</span>
                 </h1>
                 <button
-                  className=' bg-primary p-3 rounded-xl text-gray-950 px-4 text-xl font-bold'
+                  className=' bg-primary p-3 rounded-xl text-gray-950 px-4 text-xl font-bold  hover:bg-opacity-70'
                   onClick={() => signIn()}
-                >Sign in
+                >Pruebalo
                 </button>
               </div>
               <div class='mb-12 lg:mb-0 lg:mt-12'>

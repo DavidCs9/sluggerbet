@@ -14,7 +14,7 @@ export default function Header () {
           </Link>
           <div className='flex items-center justify-center gap-4 ml-auto mr-6'>
             <img className=' w-8 h-8 rounded-full' src={session.user.image} />
-            <button onClick={() => signOut()}>Sign out</button>
+            <button className='bg-black bg-opacity-50 px-3 rounded-md hover:bg-opacity-80 py-1' onClick={() => signOut()}>Sign out</button>
           </div>
         </nav>
       </header>
@@ -26,7 +26,7 @@ export default function Header () {
         <Link href='/'>
           <h1 className='text-xl pl-10'>SluggerBet</h1>
         </Link>
-        <div className='flex items-center justify-center gap-4 ml-auto pr-10'>
+        <div className='flex items-center justify-center gap-4 ml-auto mr-10 bg-black bg-opacity-50 px-3 py-1 rounded-md hover:bg-opacity-80'>
           <button onClick={() => signIn()}>Sign In</button>
         </div>
       </nav>

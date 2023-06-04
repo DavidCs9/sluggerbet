@@ -8,7 +8,7 @@ const ovo = Ovo({ subsets: ['latin'], weight: '400' })
 
 export const metadata = {
   title: 'SluggerBet',
-  description: 'Aplicacion web para estadisticasa avanzadas y de apuesta de baseball'
+  description: 'Aplicacion web para estadisticas avanzadas y de apuesta de baseball'
 }
 
 export default function RootLayout ({ children }) {
