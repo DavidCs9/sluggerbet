@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react'
 
 export default function Landing () {
   return (
-    <div className=' bg-slate-950 text-slate-100'>
+    <div className=' bg-gray-950 text-slate-100'>
       <motion.section
         id='hero'
         className='mb-40 h-screen'
