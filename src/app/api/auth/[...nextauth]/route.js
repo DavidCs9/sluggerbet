@@ -1,8 +1,11 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 import GithubProvider from 'next-auth/providers/github'
+import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
+import clientPromise from 'lib/mongodb'
 
 export const authOptions = {
+  adapter: MongoDBAdapter(clientPromise),
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
@@ -12,19 +15,6 @@ export const authOptions = {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET
     })]
-  // callbacks: {
-  //   async redirect ({ url, baseUrl }) {
-  //     const user = await getUser()
-  //     // Allows relative callback URLs
-  //     // If the user is logged in, redirect to the dashboard page
-  //     if (user) {
-  //       return baseUrl + '/application'
-  //     } else {
-  //       // Otherwise, redirect to the signin page
-  //       return baseUrl + '/api/auth/'
-  //     }
-  //   }
-  // }
 }
 
 const handler = NextAuth(authOptions)
