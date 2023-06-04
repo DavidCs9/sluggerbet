@@ -15,7 +15,7 @@ export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
       <body className={ovo.className}>
-        <Provider className='bg-gray-950 text-slate-100'>
+        <Provider>
           <Header />
           {children}
           <Footer />

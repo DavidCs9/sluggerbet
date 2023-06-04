@@ -3,7 +3,7 @@ import { BsInstagram, BsLinkedin, BsTiktok } from 'react-icons/bs'
 export default function Footer () {
   return (
     <>
-      <footer className=' pb-10'>
+      <footer className=' pb-10 bg-slate-950'>
         <ul className='flex justify-center gap-3 mb-7 text-slate-300 cursor-pointer'>
           <li>
             <BsInstagram />

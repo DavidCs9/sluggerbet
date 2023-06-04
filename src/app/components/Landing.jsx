@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react'
 
 export default function Landing () {
   return (
-    <>
+    <div className=' bg-slate-950 text-slate-100'>
       <motion.section
         id='hero'
         className='mb-40 h-screen'
@@ -341,7 +341,7 @@ export default function Landing () {
       <section id='preguntas' className='lg:h-screen'>
         <Pregunta />
       </section>
-      <section id='LCA' className='mx-8 text-center lg:h-screen mb-16 mt-16'>
+      <section id='LCA' className='mx-8 text-center lg:h-screen pb-16 mt-16'>
         <div className='px-6 py-12 md:px-12'>
           <h2 className=' text-4xl lg:text-5xl my-12 font-bold tracking-tight'>
             Aprovecha la <br />prueba
@@ -354,6 +354,6 @@ export default function Landing () {
           </button>
         </div>
       </section>
-    </>
+    </div>
   )
 }
