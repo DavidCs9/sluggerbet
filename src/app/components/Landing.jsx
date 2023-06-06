@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Pregunta } from './Pregunta'
-import { signIn } from 'next-auth/react'
+import Link from 'next/link'
 
 export default function Landing () {
   return (
@@ -20,11 +20,7 @@ export default function Landing () {
                 <h1 class='text-5xl md:text-6xl xl:text-7xl text-slate-200 font-bold tracking-tight mb-12'>
                   Apuestas inteligentes<br /><span class=' text-primary'>Datos poderosos</span>
                 </h1>
-                <button
-                  className=' bg-primary p-3 rounded-xl text-gray-950 px-4 text-xl font-bold  hover:bg-opacity-70'
-                  onClick={() => signIn()}
-                >Pruebalo
-                </button>
+                <Link className='text-xl bg-primary px-4 py-2 rounded-md hover:bg-opacity-50' href='/dashboard'>Dashboard</Link>
               </div>
               <div class='mb-12 lg:mb-0 lg:mt-12'>
                 <img
@@ -347,11 +343,7 @@ export default function Landing () {
             Aprovecha la <br />prueba
             <span className='text-primary'> gratis</span>
           </h2>
-          <button
-            className=' bg-primary p-3 rounded-xl text-gray-950 px-4 text-xl font-bold'
-            onClick={() => signIn()}
-          >Sign in
-          </button>
+          <Link className='text-xl bg-primary px-4 py-2 rounded-md hover:bg-opacity-50' href='/dashboard'>Dashboard</Link>
         </div>
       </section>
     </div>
