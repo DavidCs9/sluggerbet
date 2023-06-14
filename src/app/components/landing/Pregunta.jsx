@@ -1,3 +1,4 @@
+'use client'
 import { Accordion } from './Accordion'
 import { motion } from 'framer-motion'
 
