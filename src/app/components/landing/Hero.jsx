@@ -19,7 +19,7 @@ export function Hero () {
                 Apuestas inteligentes<br /><span class=' text-primary'>Datos poderosos</span>
               </h1>
               <motion.div
-                className='landing-btn rounded-lg text-white text-xl font-bold shadow-lg  w-40 text-center py-2'
+                className='landing-btn rounded-lg text-white text-xl font-bold shadow-lg  w-40 text-center py-2 m-auto'
                 whileHover={{ scale: 1.1 }}
               >
                 <Link href='/dashboard'>Dashboard</Link>
