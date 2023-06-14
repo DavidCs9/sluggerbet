@@ -18,7 +18,12 @@ export function Hero () {
               <h1 class='text-5xl md:text-6xl xl:text-7xl text-slate-200 font-bold tracking-tight mb-12'>
                 Apuestas inteligentes<br /><span class=' text-primary'>Datos poderosos</span>
               </h1>
-              <Link href='/dashboard'>Dashboard</Link>
+              <motion.div
+                className='landing-btn rounded-lg text-white text-xl font-bold shadow-lg  w-40 text-center py-2'
+                whileHover={{ scale: 1.1 }}
+              >
+                <Link href='/dashboard'>Dashboard</Link>
+              </motion.div>
             </div>
             <div class='mb-12 lg:mb-0 lg:mt-12'>
               <img

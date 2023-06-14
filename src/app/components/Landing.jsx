@@ -6,7 +6,7 @@ import { Lca } from './landing/Lca'
 
 export default function Landing () {
   return (
-    <div className=' bg-gray-950 text-slate-100'>
+    <div className='bg-gray-950 text-slate-100'>
       <Hero />
       <Features />
       <Testimonios />
