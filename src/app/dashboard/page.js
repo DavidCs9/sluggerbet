@@ -1,7 +1,6 @@
 'use client'
 
 import Main from '../components/Main'
-<<<<<<< HEAD
 import { useSession, signIn } from 'next-auth/react'
 
 export default function Dashboard () {
@@ -10,7 +9,7 @@ export default function Dashboard () {
   // If no session exists, display access denied message
   if (!session) {
     return (
-      <div className='pt-20'>
+      <div className='p-20 flex flex-col w-full text-center'>
         <h1>Access Denied</h1>
         <p>
           <a
@@ -28,23 +27,5 @@ export default function Dashboard () {
   }
   return (
     <Main />
-=======
-import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
-// import { useEffect } from 'react' // Import useEffect
-
-export default function Home () {
-  const { data: session } = useSession()
-  const router = useRouter()
-
-  if (!session) {
-    router.push('/api/auth/signin') // Redirect to the specified destination
-  }
-
-  return (
-    <div>
-      <Main />
-    </div>
->>>>>>> 32371148d0711e87d1b0c3591bfc5dbcdf8427d8
   )
 }
